@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilos del formulario de creación */
+#formulario-faq {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #0056b3;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Estructura de cada fila (tarjeta) de pregunta generada desde JS */
+.fila-faq {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: #fafafa;
+}
+
+/* El título será el elemento clicleable para el Traversing */
+.pregunta-titulo {
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* La respuesta inicia oculta, cumpliendo la regla del proyecto */
+.respuesta-texto {
+    margin-top: 10px;
+    color: #666;
+    display: none; 
+}
+
+/* Esta clase la activaremos con JS para mostrar la respuesta */
+.respuesta-texto.visible {
+    display: block; 
+}
+
+/* Contenedor de los botones CRUD de cada fila */
+.acciones {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-editar { background-color: #f0ad4e; }
+.btn-editar:hover { background-color: #ec971f; }
+.btn-eliminar { background-color: #d9534f; }
+.btn-eliminar:hover { background-color: #c9302c; }
